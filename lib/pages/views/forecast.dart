@@ -1,6 +1,7 @@
 import 'package:api_project/fake_data/fake_data.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer' as dev;
+import '../Custom_widgets/main_widget.dart';
 
 class Forecast extends StatefulWidget {
   const Forecast({Key? key}) : super(key: key);
@@ -72,20 +73,10 @@ class _ForecastState extends State<Forecast> {
                         )),
                   ]),
             ),
-            const Opacity(
-              opacity: 0.85,
-              child: Image(
-                  width: 56,
-                  height: 56,
-                  image: AssetImage('assets/images/rain2.png')),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            const Text(
-              '24°',
-              style: TextStyle(fontSize: 64, color: Color(0xD9F0F0F0)),
-            ),
+            MainWidget(
+              weatherIcon: data.weatherForCast['Sunday']![0]
+                ['weather condition'],
+              temperature: data.weatherForCast['Sunday']![0]['temperature'],),
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 46, 16, 0),
               child: Row(
@@ -167,60 +158,60 @@ class _ForecastState extends State<Forecast> {
             Expanded(
                 child: Padding(
               padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: data.weatherForCast['Sunday']!.length,
-                //data.listOfWeather.length,
-                itemBuilder: (context, index) {
-                  return Container(
-                    margin: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                            width: 2, color: const Color(0xD9F0F0F0)),
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10))),
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(26, 19, 26, 19),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text(
-                            data.weatherForCast['Sunday']![index]['hour'],
-                            //data.listOfWeather[index]['hour'],
-                            style: const TextStyle(
-                              fontSize: 16,
-                              color: Color(0xD9F0F0F0),
-                            ),
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: data.weatherForCast['Sunday']!.length,
+                    //data.listOfWeather.length,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                width: 2, color: const Color(0xD9F0F0F0)),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(10))),
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(26, 19, 26, 19),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text(
+                                data.weatherForCast['Sunday']![index]['hour'],
+                                //data.listOfWeather[index]['hour'],
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  color: Color(0xD9F0F0F0),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 14,
+                              ),
+                              Opacity(
+                                opacity: 0.85,
+                                child: Image(
+                                    height: 34,
+                                    width: 34,
+                                    image: AssetImage(
+                                      data.weatherForCast['Sunday']![index]
+                                          ['weather condition'],
+                                    )),
+                              ),
+                              const SizedBox(
+                                height: 14,
+                              ),
+                              Text(
+                                data.weatherForCast['Sunday']![index]
+                                    ['temperature'],
+                                style: const TextStyle(
+                                    fontSize: 28, color: Color(0xD9F0F0F0)),
+                              )
+                            ],
                           ),
-                          const SizedBox(
-                            height: 14,
-                          ),
-                          Opacity(
-                            opacity: 0.85,
-                            child: Image(
-                                height: 34,
-                                width: 34,
-                                image: AssetImage(
-                                  data.weatherForCast['Sunday']![index]
-                                      ['weather condition'],
-                                )),
-                          ),
-                          const SizedBox(
-                            height: 14,
-                          ),
-                          Text(
-                            data.weatherForCast['Sunday']![index]
-                                ['temperature'],
-                            style: const TextStyle(
-                                fontSize: 28, color: Color(0xD9F0F0F0)),
-                          )
-                        ],
-                      ),
-                    ),
-                  );
-                },
-              ),
-            )),
+                        ),
+                      );
+                    },
+                  ),
+              )),
             const SizedBox(
               height: 50,
             ),
