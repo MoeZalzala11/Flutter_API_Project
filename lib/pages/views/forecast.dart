@@ -1,4 +1,5 @@
 import 'package:api_project/fake_data/fake_data.dart';
+import 'package:api_project/pages/Custom_widgets/extra_info_widget.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer' as dev;
 import '../Custom_widgets/main_widget.dart';
@@ -75,89 +76,18 @@ class _ForecastState extends State<Forecast> {
             ),
             MainWidget(
               weatherIcon: data.weatherForCast['Sunday']![0]
-                ['weather condition'],
-              temperature: data.weatherForCast['Sunday']![0]['temperature'],),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 46, 16, 0),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Column(
-                      children: const [
-                        Opacity(
-                          opacity: 0.80,
-                          child: Image(
-                              width: 34,
-                              height: 34,
-                              image: AssetImage('assets/images/humidity.png')),
-                        ),
-                        SizedBox(
-                          height: 7,
-                        ),
-                        Text('Humidity',
-                            style: TextStyle(color: Color(0xB3F0F0F0))),
-                        SizedBox(
-                          height: 7,
-                        ),
-                        Text('100%',
-                            style: TextStyle(color: Color(0xCCF0F0F0))),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: const [
-                        Opacity(
-                          opacity: 0.80,
-                          child: Image(
-                              width: 34,
-                              height: 34,
-                              image:
-                                  AssetImage('assets/images/wind_speed.png')),
-                        ),
-                        SizedBox(
-                          height: 7,
-                        ),
-                        Text('Wind Speed',
-                            style: TextStyle(color: Color(0xB3F0F0F0))),
-                        SizedBox(
-                          height: 7,
-                        ),
-                        Text('13 Km/h',
-                            style: TextStyle(color: Color(0xCCF0F0F0))),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: const [
-                        Opacity(
-                          opacity: 0.80,
-                          child: Image(
-                              width: 34,
-                              height: 34,
-                              image: AssetImage('assets/images/rain2.png')),
-                        ),
-                        SizedBox(
-                          height: 7,
-                        ),
-                        Text('Chance to Rain',
-                            style: TextStyle(color: Color(0xB3F0F0F0))),
-                        SizedBox(
-                          height: 7,
-                        ),
-                        Text('100%',
-                            style: TextStyle(color: Color(0xCCF0F0F0))),
-                      ],
-                    ),
-                  )
-                ],
-              ),
+                  ['weather condition'],
+              temperature: data.weatherForCast['Sunday']![0]['temperature'],
+            ),
+            ExtraInfoWidget(
+              humidityPercentage: data.weatherForCast['Sunday']![0]['humidity'],
+              windSpeed: data.weatherForCast['Sunday']![0]['wind speed'],
+              chanceToRain: data.weatherForCast['Sunday']![0]['chance to rain'],
             ),
             const SizedBox(height: 65),
             Expanded(
                 child: Padding(
-              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+                  padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: data.weatherForCast['Sunday']!.length,
@@ -211,7 +141,7 @@ class _ForecastState extends State<Forecast> {
                       );
                     },
                   ),
-              )),
+                )),
             const SizedBox(
               height: 50,
             ),

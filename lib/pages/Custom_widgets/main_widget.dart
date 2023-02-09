@@ -17,7 +17,7 @@ class MainWidget extends StatelessWidget {
         height: 30,
       ),
       Text(
-        '$temperature°',
+        temperature,
         style: const TextStyle(fontSize: 64, color: Color(0xD9F0F0F0)),
       )
     ]);
