@@ -20,7 +20,7 @@ class FakeData {
      },
      {
        'hour': '2:00',
-       'temperature': '17°',
+       'temperature': '16°',
        'humidity': '82%',
        'wind speed': '28km/h',
        'chance to rain': '36%',

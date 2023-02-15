@@ -1,4 +1,5 @@
 import 'package:api_project/fake_data/fake_data.dart';
+import 'package:api_project/pages/Custom_widgets/day_navigator.dart';
 import 'package:api_project/pages/Custom_widgets/extra_info_widget.dart';
 import 'package:api_project/pages/Custom_widgets/hourly_forecast_widget.dart';
 import 'package:flutter/material.dart';
@@ -51,8 +52,8 @@ class _ForecastState extends State<Forecast> {
                 ],
               ),
             ),
-
-            Padding(
+            const DayNavigator(),
+            /*Padding(
               padding: const EdgeInsets.fromLTRB(16, 30, 16, 34),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -75,7 +76,7 @@ class _ForecastState extends State<Forecast> {
                           color: Color(0xCCF0F0F0),
                         )),
                   ]),
-            ),
+            ),*/
 
             MainWidget(
               dataMap: data.weatherForCast['Sunday']![0],
