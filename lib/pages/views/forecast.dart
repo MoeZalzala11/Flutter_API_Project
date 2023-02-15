@@ -41,7 +41,7 @@ class _ForecastState extends State<Forecast> {
                             width: 1, color: Color(0x99F0F0F0)),
                         padding: const EdgeInsets.fromLTRB(8, 12, 8, 12)),
                     label:
-                        const Icon(Icons.location_on, color: Color(0xCCF0F0F0)),
+                    const Icon(Icons.location_on, color: Color(0xCCF0F0F0)),
                     icon: const Text(
                       'Baghdad',
                       style: TextStyle(fontSize: 16, color: Color(0xCCF0F0F0)),
@@ -78,9 +78,7 @@ class _ForecastState extends State<Forecast> {
             ),
 
             MainWidget(
-              weatherIcon: data.weatherForCast['Sunday']![0]
-                  ['weather condition'],
-              temperature: data.weatherForCast['Sunday']![0]['temperature'],
+              dataMap: data.weatherForCast['Sunday']![0],
             ),
 
             ExtraInfoWidget(
@@ -92,8 +90,9 @@ class _ForecastState extends State<Forecast> {
             Expanded(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-                  child: HourlyForecastWidget(dataMap: data.weatherForCast['Sunday'],),
-              )
+                  child: HourlyForecastWidget(
+                    dataMap: data.weatherForCast['Sunday'],),
+                )
             ),
 
             const SizedBox(
