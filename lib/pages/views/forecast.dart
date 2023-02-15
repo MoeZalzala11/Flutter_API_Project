@@ -37,7 +37,6 @@ class _ForecastState extends State<Forecast> {
 
                   OutlinedButton.icon(
                     style: OutlinedButton.styleFrom(
-                        //backgroundColor: Colors.redAccent,
                         side: const BorderSide(
                             width: 1, color: Color(0x99F0F0F0)),
                         padding: const EdgeInsets.fromLTRB(8, 12, 8, 12)),
@@ -85,21 +84,18 @@ class _ForecastState extends State<Forecast> {
             ),
 
             ExtraInfoWidget(
-              humidityPercentage: data.weatherForCast['Sunday']![0]['humidity'],
-              windSpeed: data.weatherForCast['Sunday']![0]['wind speed'],
-              chanceToRain: data.weatherForCast['Sunday']![0]['chance to rain'],
+              dataMap: data.weatherForCast['Sunday']![0],
             ),
 
             const SizedBox(height: 65),
+
             Expanded(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
-
-                  child: HourlyForecastWidget(map: data.weatherForCast['Sunday'],),
-
-
+                  child: HourlyForecastWidget(dataMap: data.weatherForCast['Sunday'],),
               )
             ),
+
             const SizedBox(
               height: 50,
             ),

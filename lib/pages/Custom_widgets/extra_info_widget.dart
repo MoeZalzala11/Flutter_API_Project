@@ -3,14 +3,13 @@ import 'package:flutter/material.dart';
 class ExtraInfoWidget extends StatelessWidget {
   const ExtraInfoWidget(
       {Key? key,
-        required this.humidityPercentage,
-        required this.windSpeed,
-        required this.chanceToRain})
+
+        required this.dataMap})
       : super(key: key);
 
-  final String humidityPercentage;
-  final String windSpeed;
-  final String chanceToRain;
+
+
+  final Map<String, dynamic> dataMap;
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +35,12 @@ class ExtraInfoWidget extends StatelessWidget {
                 const SizedBox(
                   height: 7,
                 ),
-                Text(humidityPercentage,
+                Text(dataMap['humidity'],
                     style: const TextStyle(color: Color(0xCCF0F0F0))),
               ],
             ),
           ),
+
           Expanded(
             child: Column(
               children: [
@@ -60,7 +60,7 @@ class ExtraInfoWidget extends StatelessWidget {
                 const SizedBox(
                   height: 7,
                 ),
-                Text(windSpeed,
+                Text(dataMap['wind speed'],
                     style: const TextStyle(color: Color(0xCCF0F0F0))),
               ],
             ),
@@ -83,7 +83,7 @@ class ExtraInfoWidget extends StatelessWidget {
                 const SizedBox(
                   height: 7,
                 ),
-                Text(chanceToRain,
+                Text(dataMap['chance to rain'],
                     style: const TextStyle(color: Color(0xCCF0F0F0))),
               ],
             ),

@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class HourlyForecastWidget extends StatelessWidget {
   const HourlyForecastWidget(
       {Key? key,
-      required this.map
+      required this.dataMap
       })
       : super(key: key);
 
-  final List<Map<String, dynamic>>? map;
+  final List<Map<String, dynamic>>? dataMap;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class HourlyForecastWidget extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: map?.length,
+            itemCount: dataMap?.length,
             itemBuilder: (context, index) {
               return Container(
                 margin: const EdgeInsets.all(8),
@@ -29,7 +29,7 @@ class HourlyForecastWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Text(
-                        map![index]['hour'],
+                        dataMap![index]['hour'],
                         style: const TextStyle(
                           fontSize: 16,
                           color: Color(0xD9F0F0F0),
@@ -44,14 +44,14 @@ class HourlyForecastWidget extends StatelessWidget {
                             height: 34,
                             width: 34,
                             image: AssetImage(
-                                map![index]['weather condition'])
+                                dataMap![index]['weather condition'])
                             )
                       ),
                       const SizedBox(
                         height: 14,
                       ),
                       Text(
-                        map![index]['temperature'],
+                        dataMap![index]['temperature'],
                         style:
                             const TextStyle(fontSize: 28, color: Color(0xD9F0F0F0)),
                       )
