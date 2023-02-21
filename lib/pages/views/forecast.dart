@@ -2,6 +2,7 @@ import 'package:api_project/fake_data/fake_data.dart';
 import 'package:api_project/pages/Custom_widgets/day_navigator.dart';
 import 'package:api_project/pages/Custom_widgets/extra_info_widget.dart';
 import 'package:api_project/pages/Custom_widgets/hourly_forecast_widget.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer' as dev;
 import '../Custom_widgets/main_widget.dart';
@@ -15,6 +16,38 @@ class Forecast extends StatefulWidget {
 
 class _ForecastState extends State<Forecast> {
   FakeData data = FakeData();
+  String day = 'Sunday';
+  int index = 0;
+
+  void navigateForward(){
+    if(index < data.weatherForCast.keys.toList().length-1){
+      setState(() {
+        index++;
+      });
+    }
+    else{
+      setState(() {
+        index = 0;
+      });
+    }
+  }
+
+  void navigateBackward(){
+    if(index < data.weatherForCast.keys.toList().length-1){
+      setState(() {
+        index--;
+      });
+    }
+    else{
+      setState(() {
+        index = 6;
+      });
+    }
+  }
+
+  String returnTheDay(){
+    return data.weatherForCast.keys.toList()[index];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,31 +85,11 @@ class _ForecastState extends State<Forecast> {
                 ],
               ),
             ),
-            const DayNavigator(),
-            /*Padding(
-              padding: const EdgeInsets.fromLTRB(16, 30, 16, 34),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.arrow_back_ios_new_rounded,
-                            color: Color(0xCCF0F0F0))),
-                    const Text(
-                      'Today',
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: Color(0xCCF0F0F0),
-                      ),
-                    ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.arrow_forward_ios_rounded,
-                          color: Color(0xCCF0F0F0),
-                        )),
-                  ]),
-            ),*/
+
+            DayNavigator(
+              navigateForward: navigateForward,
+              day: data.weatherForCast.keys.toList()[index],
+              navigateBackward: navigateBackward,),
 
             MainWidget(
               dataMap: data.weatherForCast['Sunday']![0],

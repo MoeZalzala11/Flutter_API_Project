@@ -1,38 +1,43 @@
 import 'package:flutter/material.dart';
 
-class DayNavigator extends StatefulWidget {
-  const DayNavigator({Key? key}) : super(key: key);
+class DayNavigator extends StatelessWidget {
+  const DayNavigator(
+      {Key? key,
+      required this.navigateForward,
+      required this.day,
+      required this.navigateBackward})
+      : super(key: key);
 
-  @override
-  State<DayNavigator> createState() => _DayNavigatorState();
-}
+  final Function navigateForward;
+  final Function navigateBackward;
+  final String day;
 
-class _DayNavigatorState extends State<DayNavigator> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 30, 16, 34),
-      child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.arrow_back_ios_new_rounded,
-                    color: Color(0xCCF0F0F0))),
-            const Text(
-              'Today',
-              style: TextStyle(
-                fontSize: 24,
-                color: Color(0xCCF0F0F0),
-              ),
-            ),
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Color(0xCCF0F0F0),
-                )),
-          ]),
+      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        IconButton(
+            onPressed: () => navigateBackward(),
+            icon: const Icon(
+                Icons.arrow_back_ios_new_rounded,
+                color: Color(0xCCF0F0F0))),
+        Text(
+          day,
+          style: const TextStyle(
+            fontSize: 24,
+            color: Color(0xCCF0F0F0),
+          ),
+        ),
+        IconButton(
+            onPressed: () {
+              navigateForward();
+            },
+            icon: const Icon(
+              Icons.arrow_forward_ios_rounded,
+              color: Color(0xCCF0F0F0),
+            )),
+      ]),
     );
   }
 }

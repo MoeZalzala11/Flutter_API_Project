@@ -6,7 +6,6 @@ class MainWidget extends StatelessWidget {
       required this.dataMap})
       : super(key: key);
 
-
   final Map<String, dynamic> dataMap;
 
   @override
