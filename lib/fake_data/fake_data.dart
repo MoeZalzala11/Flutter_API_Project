@@ -224,7 +224,7 @@ class FakeData {
      },
      {
        'hour': '1:00',
-       'temperature': '17°',
+       'temperature': '20°',
        'humidity': '89%',
        'wind speed': '28km/h',
        'chance to rain': '36%',
@@ -232,7 +232,7 @@ class FakeData {
      },
      {
        'hour': '2:00',
-       'temperature': '17°',
+       'temperature': '20°',
        'humidity': '82%',
        'wind speed': '28km/h',
        'chance to rain': '36%',
@@ -240,7 +240,7 @@ class FakeData {
      },
      {
        'hour': '3:00',
-       'temperature': '15°',
+       'temperature': '21°',
        'humidity': '79%',
        'wind speed': '17km/h',
        'chance to rain': '25%',
@@ -248,7 +248,7 @@ class FakeData {
      },
      {
        'hour': '4:00',
-       'temperature': '16°',
+       'temperature': '21°',
        'humidity': '82%',
        'wind speed': '17km/h',
        'chance to rain': '15%',
@@ -256,7 +256,7 @@ class FakeData {
      },
      {
        'hour': '5:00',
-       'temperature': '16°',
+       'temperature': '21°',
        'humidity': '84%',
        'wind speed': '17km/h',
        'chance to rain': '34%',
@@ -264,7 +264,7 @@ class FakeData {
      },
      {
        'hour': '6:00',
-       'temperature': '16°',
+       'temperature': '20°',
        'humidity': '%',
        'wind speed': '17km/h',
        'chance to rain': '24%',
@@ -272,7 +272,7 @@ class FakeData {
      },
      {
        'hour': '7:00',
-       'temperature': '16°',
+       'temperature': '20°',
        'humidity': '85%',
        'wind speed': '17km/h',
        'chance to rain': '11%',
@@ -280,7 +280,7 @@ class FakeData {
      },
      {
        'hour': '8:00',
-       'temperature': '16°',
+       'temperature': '19°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -288,7 +288,7 @@ class FakeData {
      },
      {
        'hour': '9:00',
-       'temperature': '16°',
+       'temperature': '19°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -296,7 +296,7 @@ class FakeData {
      },
      {
        'hour': '10:00',
-       'temperature': '16°',
+       'temperature': '18°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -304,7 +304,7 @@ class FakeData {
      },
      {
        'hour': '11:00',
-       'temperature': '16°',
+       'temperature': '18°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -312,7 +312,7 @@ class FakeData {
      },
      {
        'hour': '12:00',
-       'temperature': '16°',
+       'temperature': '18°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -322,7 +322,7 @@ class FakeData {
    'Wednesday':  [
      {
        'hour': '12:00',
-       'temperature': '17°',
+       'temperature': '18°',
        'humidity': '90%',
        'wind speed': '28km/h',
        'chance to rain': '36%',
@@ -330,7 +330,7 @@ class FakeData {
      },
      {
        'hour': '1:00',
-       'temperature': '17°',
+       'temperature': '18°',
        'humidity': '89%',
        'wind speed': '28km/h',
        'chance to rain': '36%',
@@ -338,7 +338,7 @@ class FakeData {
      },
      {
        'hour': '2:00',
-       'temperature': '17°',
+       'temperature': '19°',
        'humidity': '82%',
        'wind speed': '28km/h',
        'chance to rain': '36%',
@@ -346,7 +346,7 @@ class FakeData {
      },
      {
        'hour': '3:00',
-       'temperature': '15°',
+       'temperature': '20°',
        'humidity': '79%',
        'wind speed': '17km/h',
        'chance to rain': '25%',
@@ -354,7 +354,7 @@ class FakeData {
      },
      {
        'hour': '4:00',
-       'temperature': '16°',
+       'temperature': '21°',
        'humidity': '82%',
        'wind speed': '17km/h',
        'chance to rain': '15%',
@@ -362,7 +362,7 @@ class FakeData {
      },
      {
        'hour': '5:00',
-       'temperature': '16°',
+       'temperature': '22°',
        'humidity': '84%',
        'wind speed': '17km/h',
        'chance to rain': '34%',
@@ -370,7 +370,7 @@ class FakeData {
      },
      {
        'hour': '6:00',
-       'temperature': '16°',
+       'temperature': '23°',
        'humidity': '%',
        'wind speed': '17km/h',
        'chance to rain': '24%',
@@ -378,7 +378,7 @@ class FakeData {
      },
      {
        'hour': '7:00',
-       'temperature': '16°',
+       'temperature': '22°',
        'humidity': '85%',
        'wind speed': '17km/h',
        'chance to rain': '11%',
@@ -386,7 +386,7 @@ class FakeData {
      },
      {
        'hour': '8:00',
-       'temperature': '16°',
+       'temperature': '21°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -394,7 +394,7 @@ class FakeData {
      },
      {
        'hour': '9:00',
-       'temperature': '16°',
+       'temperature': '20°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -402,7 +402,7 @@ class FakeData {
      },
      {
        'hour': '10:00',
-       'temperature': '16°',
+       'temperature': '20°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -410,7 +410,7 @@ class FakeData {
      },
      {
        'hour': '11:00',
-       'temperature': '16°',
+       'temperature': '20°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -418,7 +418,7 @@ class FakeData {
      },
      {
        'hour': '12:00',
-       'temperature': '16°',
+       'temperature': '20°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -428,7 +428,7 @@ class FakeData {
    'Thursday':  [
      {
        'hour': '12:00',
-       'temperature': '17°',
+       'temperature': '20°',
        'humidity': '90%',
        'wind speed': '28km/h',
        'chance to rain': '36%',
@@ -436,7 +436,7 @@ class FakeData {
      },
      {
        'hour': '1:00',
-       'temperature': '17°',
+       'temperature': '20°',
        'humidity': '89%',
        'wind speed': '28km/h',
        'chance to rain': '36%',
@@ -444,7 +444,7 @@ class FakeData {
      },
      {
        'hour': '2:00',
-       'temperature': '17°',
+       'temperature': '21°',
        'humidity': '82%',
        'wind speed': '28km/h',
        'chance to rain': '36%',
@@ -452,7 +452,7 @@ class FakeData {
      },
      {
        'hour': '3:00',
-       'temperature': '15°',
+       'temperature': '22°',
        'humidity': '79%',
        'wind speed': '17km/h',
        'chance to rain': '25%',
@@ -460,7 +460,7 @@ class FakeData {
      },
      {
        'hour': '4:00',
-       'temperature': '16°',
+       'temperature': '23°',
        'humidity': '82%',
        'wind speed': '17km/h',
        'chance to rain': '15%',
@@ -468,7 +468,7 @@ class FakeData {
      },
      {
        'hour': '5:00',
-       'temperature': '16°',
+       'temperature': '22°',
        'humidity': '84%',
        'wind speed': '17km/h',
        'chance to rain': '34%',
@@ -476,7 +476,7 @@ class FakeData {
      },
      {
        'hour': '6:00',
-       'temperature': '16°',
+       'temperature': '22°',
        'humidity': '%',
        'wind speed': '17km/h',
        'chance to rain': '24%',
@@ -484,7 +484,7 @@ class FakeData {
      },
      {
        'hour': '7:00',
-       'temperature': '16°',
+       'temperature': '22°',
        'humidity': '85%',
        'wind speed': '17km/h',
        'chance to rain': '11%',
@@ -492,7 +492,7 @@ class FakeData {
      },
      {
        'hour': '8:00',
-       'temperature': '16°',
+       'temperature': '21°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -500,7 +500,7 @@ class FakeData {
      },
      {
        'hour': '9:00',
-       'temperature': '16°',
+       'temperature': '21°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -508,7 +508,7 @@ class FakeData {
      },
      {
        'hour': '10:00',
-       'temperature': '16°',
+       'temperature': '20°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -516,7 +516,7 @@ class FakeData {
      },
      {
        'hour': '11:00',
-       'temperature': '16°',
+       'temperature': '19°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
@@ -524,7 +524,7 @@ class FakeData {
      },
      {
        'hour': '12:00',
-       'temperature': '16°',
+       'temperature': '19°',
        'humidity': '86%',
        'wind speed': '17km/h',
        'chance to rain': '3%',
