@@ -110,7 +110,7 @@ class FakeData {
    'Monday':  [
      {
        'hour': '12:00',
-       'temperature': '17°',
+       'temperature': '18°',
        'humidity': '90%',
        'wind speed': '28km/h',
        'chance to rain': '36%',
@@ -216,7 +216,7 @@ class FakeData {
    'Tuesday':  [
      {
        'hour': '12:00',
-       'temperature': '17°',
+       'temperature': '19°',
        'humidity': '90%',
        'wind speed': '28km/h',
        'chance to rain': '36%',

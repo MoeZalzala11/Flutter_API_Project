@@ -2,7 +2,6 @@ import 'package:api_project/fake_data/fake_data.dart';
 import 'package:api_project/pages/Custom_widgets/day_navigator.dart';
 import 'package:api_project/pages/Custom_widgets/extra_info_widget.dart';
 import 'package:api_project/pages/Custom_widgets/hourly_forecast_widget.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer' as dev;
 import '../Custom_widgets/main_widget.dart';
@@ -30,6 +29,7 @@ class _ForecastState extends State<Forecast> {
         index = 0;
       });
     }
+    returnTheDay();
   }
 
   void navigateBackward(){
@@ -43,10 +43,13 @@ class _ForecastState extends State<Forecast> {
         index = 6;
       });
     }
+    returnTheDay();
   }
 
-  String returnTheDay(){
-    return data.weatherForCast.keys.toList()[index];
+  void returnTheDay(){
+    setState(() {
+      day = data.weatherForCast.keys.toList()[index];
+    });
   }
 
   @override
@@ -92,11 +95,11 @@ class _ForecastState extends State<Forecast> {
               navigateBackward: navigateBackward,),
 
             MainWidget(
-              dataMap: data.weatherForCast['Sunday']![0],
+              dataMap: data.weatherForCast[day]![0],
             ),
 
             ExtraInfoWidget(
-              dataMap: data.weatherForCast['Sunday']![0],
+              dataMap: data.weatherForCast[day]![0],
             ),
 
             const SizedBox(height: 65),
@@ -105,7 +108,7 @@ class _ForecastState extends State<Forecast> {
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
                   child: HourlyForecastWidget(
-                    dataMap: data.weatherForCast['Sunday'],),
+                    dataMap: data.weatherForCast[day],),
                 )
             ),
 
